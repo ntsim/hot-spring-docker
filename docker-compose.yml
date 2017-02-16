@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+
+  app:
+    image: anapsix/alpine-java:8_jdk_unlimited
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: './gradlew bootRun'
