@@ -1,12 +1,12 @@
-version: '2'
+version: '3'
 
 services:
-
   app:
-    image: anapsix/alpine-java:8_jdk_unlimited
+    build: .
     ports:
       - '8080:8080'
     volumes:
-      - .:/app
+      - ./app:/app
     working_dir: /app
-    command: './gradlew bootRun'
+    user: appuser
+    command: ./gradlew --project-cache-dir /tmp/gradle-cache bootRun
