@@ -1,6 +1,5 @@
 .gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
+build/
 
 ### STS ###
 .apt_generated
@@ -15,11 +14,3 @@
 *.iws
 *.iml
 *.ipr
-
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
